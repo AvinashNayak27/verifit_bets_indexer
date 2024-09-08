@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: verifit_bets
+networks:
+- id: 421614
+  start_block: 0
+  contracts:
+  - name: GoalBetting
+    address:
+    - 0xe65872B5F4b70d6C1fe93F72beE4BE1bDAc80f53
+    handler: src/EventHandlers.ts
+    events:
+    - event: CreatedBetEvent(uint256 indexed betId, address indexed user, uint256 minSteps, uint256 startTimestamp, uint256 endTimestamp)
+    - event: ResolvedBetEvent(uint256 indexed betId, address indexed user, bool successful)
+rollback_on_reorg: false

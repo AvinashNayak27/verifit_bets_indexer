@@ -1,0 +1,16 @@
+type GoalBetting_CreatedBetEvent {
+  id: ID!
+  betId: BigInt!
+  user: String!
+  minSteps: BigInt!
+  startTimestamp: BigInt!
+  endTimestamp: BigInt!
+}
+
+type GoalBetting_ResolvedBetEvent {
+  id: ID!
+  betId: BigInt!
+  user: String!
+  successful: Boolean!
+}
+
